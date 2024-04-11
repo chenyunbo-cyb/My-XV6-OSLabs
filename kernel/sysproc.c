@@ -95,3 +95,16 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+uint64
+sys_trace(void)
+{
+  int n;
+  //获取追踪的mask
+  if(argint(0, &n)<0){
+    return -1;
+  }
+  myproc()->mask = n;
+  return 0;
+
+}

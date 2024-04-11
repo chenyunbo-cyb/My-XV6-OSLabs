@@ -8,7 +8,7 @@
 .globl swtch
 swtch:
         sd ra, 0(a0)
-        sd sp, 8(a0)
+        sd sp, 8(a0)  # sp 寄存器常用来保存 栈指针 (Stack Pointer)
         sd s0, 16(a0)
         sd s1, 24(a0)
         sd s2, 32(a0)
